@@ -1,0 +1,49 @@
+CREATE TABLE data
+(
+    c0 varchar(255) NOT NULL,
+    c1 varchar(255) NOT NULL,
+    c2 varchar(255) NOT NULL,
+    title varchar(255) NOT NULL,
+    text longtext NOT NULL
+);
+CREATE TABLE modx_site_content
+(
+    id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    type varchar(20) DEFAULT 'document' NOT NULL,
+    contentType varchar(50) DEFAULT 'text/html' NOT NULL,
+    pagetitle varchar(255) DEFAULT '' NOT NULL,
+    longtitle varchar(255) DEFAULT '' NOT NULL,
+    description varchar(255) DEFAULT '' NOT NULL,
+    alias varchar(255) DEFAULT '',
+    link_attributes varchar(255) DEFAULT '' NOT NULL,
+    published int DEFAULT 0 NOT NULL,
+    pub_date int DEFAULT 0 NOT NULL,
+    unpub_date int DEFAULT 0 NOT NULL,
+    parent int DEFAULT 0 NOT NULL,
+    isfolder int DEFAULT 0 NOT NULL,
+    introtext longtext,
+    content longtext,
+    richtext bit DEFAULT b'1' NOT NULL,
+    template int DEFAULT 1 NOT NULL,
+    menuindex int DEFAULT 0 NOT NULL,
+    searchable int DEFAULT 1 NOT NULL,
+    cacheable int DEFAULT 1 NOT NULL,
+    createdby int DEFAULT 0 NOT NULL,
+    createdon int DEFAULT 0 NOT NULL,
+    editedby int DEFAULT 0 NOT NULL,
+    editedon int DEFAULT 0 NOT NULL,
+    deleted int DEFAULT 0 NOT NULL,
+    deletedon int DEFAULT 0 NOT NULL,
+    deletedby int DEFAULT 0 NOT NULL,
+    publishedon int DEFAULT 0 NOT NULL,
+    publishedby int DEFAULT 0 NOT NULL,
+    menutitle varchar(255) DEFAULT '' NOT NULL,
+    donthit bit DEFAULT b'0' NOT NULL,
+    haskeywords bit DEFAULT b'0' NOT NULL,
+    hasmetatags bit DEFAULT b'0' NOT NULL,
+    privateweb bit DEFAULT b'0' NOT NULL,
+    privatemgr bit DEFAULT b'0' NOT NULL,
+    content_dispo bit DEFAULT b'0' NOT NULL,
+    hidemenu bit DEFAULT b'0' NOT NULL
+);
+CREATE INDEX aliasidx ON modx_site_content ( alias );

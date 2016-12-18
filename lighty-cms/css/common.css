@@ -1,0 +1,19 @@
+* {
+    font-family: 'Times New Roman',Times;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+a img {
+    border: 0 none transparent;
+}
+
+body {
+    background-color: #CCCCCC;
+}
+
+.container {
+    margin: 0 auto;
+    width: 964px;
+}
